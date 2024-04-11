@@ -1,0 +1,647 @@
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+	header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index:1;
+			display: none;
+    }
+
+	/* Show the sticky element when scrolled up */
+	header.active {
+	display: block;
+	}
+
+	nav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	nav ul li {
+		display: inline;
+		margin-right: 20px;
+	}
+	nav ul li a {
+		color: #fff;
+		text-decoration: none;
+	}
+</style>
+
+
+<style type="text/css">
+	.parallelogram {
+	width: 50%;
+	height: 49vw;
+	transform: skew(-10deg);
+	background: #FFF5;
+	left:5vw	;
+	position: 	relative;
+	background-image: linear-gradient(to bottom right, #FFF9, #000);
+}
+
+#monkeypic{
+	background:url('./images/intro.png') no-repeat; height:260px; width: 300px; background-size: 100%; z-index: 100; position: fixed;  top:0px; left:0;
+}
+
+
+
+#footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  z-index:1;
+  display: none; /* Initially hidden */
+}
+
+/* Show the sticky element when scrolled up */
+#footer.active {
+  display: block;
+}
+
+
+#face {
+      -webkit-mask-image:-webkit-gradient(linear, right top, right bottom, #FFFF,#FFF0);
+      mask-image: linear-gradient(to right bottom, #FFFF,#FFF0);
+    }
+#face2{
+	  /*background-size:100% 100%; */
+}
+
+@media screen and (max-width: 950px){
+	 #face2{
+        	 height: 450px;
+        	 background-height:cover;
+        }
+}
+
+@media screen and (max-width: 500px) {
+        .profile{
+            margin:0;
+            padding: 0;
+        }
+        #monkeypic{
+        	width:200px;
+        	height: 230px
+        }
+
+         #face2{
+        	 height: 250px;
+        	 background-height:cover;
+        }
+    }
+
+</style>
+
+<style type="text/css">
+    @media screen and (max-width: 500px) {
+        .profile, .profile input{
+            margin:0;
+            padding: 0;
+            font-size: 12px;
+        }
+        #imageframe{
+           height:150px; width:150px;
+        }
+    }
+    body{
+      background:transparent;
+    }
+</style>
+
+
+<style>
+#bio-pic{
+	-webkit-mask-image:-webkit-gradient(linear, right top, right bottom, #FFFF,#FFF0);
+      mask-image: linear-gradient(to left, #FFFF,#FFF0);
+}
+</style>
+<!-- Featured Service -->
+<style>
+.featured-service-card{
+	margin:20px; padding:5px;
+	width:300px; height:420px; box-shadow:3px 3px 20px rgb(75, 45, 1); border-radius: 2vw; text-align: center; background-image:linear-gradient(to right,   rgba(238, 220, 197, 0.875), rgba(255, 237, 171, 0.883), rgba(238, 220, 197, 0.875));
+}
+.featured-service-card-detail{
+	font-size: 12px; color:black
+}
+</style>
+
+<!-- Contact Section -->
+<style>
+	#contact {
+  background: linear-gradient(to bottom, #ffffff, #e6e6e6); /* Gradient background */
+  padding: 50px 0;
+  width: 80%;
+  margin:auto;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2e2e2e; /* Dark gray */
+}
+
+.contact-container p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #2a2a2a; /* Brownish gray */
+}
+	
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #4d4d4d; /* Dark gray */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #4d4d4d; /* Dark gray */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #333; /* Darker gray on hover */
+}
+</style>
+
+
+<!-- Portfolio and Project Showcase -->
+<style>
+#portfolio {
+	margin:auto;
+    background-color: #09090955;
+    padding: 50px 0;
+    text-align: center; /* Center the content */
+	width:80%
+  }
+
+  .portfolio-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .portfolio-container h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #fff; /* Dark gray */
+  }
+
+  .portfolio-container p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #fff; /* Medium gray */
+  }
+
+  .project {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+    display: inline-block; /* Display projects side by side */
+    width: calc(33.33% - 20px); /* Adjust width for three projects per row */
+    margin-right: 20px; /* Add space between projects */
+    vertical-align: top; /* Align projects to the top */
+  }
+
+  .project:last-child {
+    margin-right: 0; /* Remove margin from the last project */
+  }
+
+  .project:hover {
+    transform: translateY(-5px);
+  }
+
+  .project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+
+  .project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* Dark gray */
+  }
+
+  .project p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666; /* Medium gray */
+  }
+
+  .project .btn {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .project .btn:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<!---- Styles for the FAQs section -->
+<style>
+
+	.faq-section {
+	  max-width: 800px;
+	  margin: 0 auto;
+	  padding: 50px 20px;
+	}
+	
+	.faq-item {
+	  margin-bottom: 30px;
+	}
+	
+	.faq-question {
+	  font-size: 20px;
+	  font-weight: bold;
+	  cursor: pointer;
+	  color: #ffffff;
+	  border-bottom: 1px solid #ccc;
+	  padding-bottom: 10px;
+	}
+	
+	.faq-answer {
+	  display: none;
+	  font-size: 16px;
+	  color: #ffffff;
+	  margin-top: 10px;
+	}
+	
+	/* Styles for the accordion effect */
+	.faq-answer.show {
+	  display: block;
+	}
+	
+	/* Styles for the plus/minus icon */
+	.faq-question::after {
+	  content: '+';
+	  float: right;
+	}
+	
+	.faq-question.open::after {
+	  content: '-';
+	}
+</style>
+<html>
+	<header id='header' style="border-bottom: none; padding: 35px 0px; background:black; width:100%;">
+		<title>Test Tickles</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- Tell the browser to be responsive to screen width -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="Sjay Pits">
+		<!-- Favicon icon -->
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/coconutnut.png">
+
+		
+        <nav>
+			<ul class="primary-nav">
+				<li><a href="#face">Features</a></li>
+				<li><a href="#bio">Bio</a></li>
+				<li><a href="#face2">Blog</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+           
+
+			<!-- <ul class="member-actions" style="top: 26px;  "> -->
+			<!-- <li><a href="https://youtube.com" class="btn-white btn-small">Sign up</a></li> 
+			</ul>-->
+			<ul id="cocologo" style="position:absolute; left:90%; top:34px;">
+				<img src="./images/coconutnut.png"  style="height:40px; " alt="coconutnut logo">
+				<li style="color:white; font-size:15px">Test Tickles</li>
+			</ul>
+        </nav>
+		<div class="navicon" style="top: 34px;">
+			<a class="nav-toggle" href="#"><span></span></a>
+		</div>
+	</header>
+	<div id="monkeypic"></div>	
+
+	<body id="stomach" style="background-image: linear-gradient(to bottom right, #000, #850, #310, #000);" class="container-fluid">
+		<div id="face" style= "background:url('./images/intro_bg.jpg') no-repeat; width: 100%; background-size: 100%; opacity:0.95;">
+			<div class="parallelogram" style="text-align:center; color:white; ">
+				<label style="font-weight:bold; padding:0; margin:0; padding-top: 40%">
+					<span style="padding:0; margin:0; font-size: 8vw; width:100%; ">SJAY PITS</span>
+					<br>
+					<span style="font-size: 3vw; width:100%">Software Developer</span>
+					<br>
+					<span style="font-size: 1vw; width:100%">Unlocking Solutions: Custom Programming and Analytics Services</span>
+				</label>
+			</div>
+		</div>
+		
+		<div id="bio" class="container-fluid" style=" width: 70%;  background:url('./images/code.png') no-repeat; background-size: cover; border:0px solid white; display: flex; flex-direction: row-reverse; min-height:200px; padding:0 ">
+			<img  id = 'bio-pic' src = './images/bio-pic.jpg' style= "object-fit: contain; object-position: top; opacity:0.85; margin:0; max-height:100%;	" />
+			<p style="color:white; padding:15px 0 0 125px; text-align:justify; background:#0006; text-indent: 1in; font-size: 1.5rem; margin-top:50px">
+				Hello, I'm SJAY, a dynamic professional with over 6 years of experience across banking, manufacturing, and outsourcing sectors.
+				I'm a Full Stack Developer utilizing various tools and technologies.
+				With a knack for data analytics and developing innovative solutions, I've contributed to operational efficiency in banking, manufacturing and other industries.
+				Additionally, my proficiency in developing and enhancing web-based applications highlights my adaptability and value in leveraging technology for business success.</p>
+		</div>
+
+
+		<div id="featured-service-mainframe" style="background:#ffffff05; min-height:800px; width:70%; margin:0 auto; display: flex;
+		flex-direction: row;    flex-wrap: wrap;    justify-content: space-around; align-items: center;">
+			<div class="featured-service-card"  >
+				<img src="./images/Featured Service/Custom Scripting.png">
+				<label style="color:black; "><h4>Custom Scripting</h4></label>
+				<label class="featured-service-card-detail">Tailored automation crafted to streamline processes and empower your business with efficiency and flexibility.</label>
+				<!-- Display Icon with Information -->
+			</div>
+			<div class="featured-service-card"  >
+				<img src="./images/Featured Service/Data Analytics.png">
+				<label style="color:black; "><h4>Data Analytics</h4></label>
+				<label class="featured-service-card-detail">Insightful analysis coupled with targeted solutions to uncover patterns, resolve discrepancies, and drive informed decision-making.</label>
+				
+				<!-- Display Icon with Information -->
+			</div>
+			<div class="featured-service-card"  >
+				<img src="./images/Featured Service/Freelance.png">
+				<label style="color:black; "><h4>Freelance</h4></label>
+				<label class="featured-service-card-detail">Bespoke solutions and personalized assistance to propel your business forward, from concept to execution, with reliability and expertise.</label>
+				
+				<!-- Display Icon with Information -->
+			</div>
+			<div class="featured-service-card"  >
+				<img src="./images/Featured Service/Mentorship.png">
+				<label style="color:black; "><h4>Mentorship</h4></label>
+				<label class="featured-service-card-detail">Guidance and support tailored to nurture skills, empower learning, and propel students toward academic and professional success.</label>
+				
+				<!-- Display Icon with Information -->
+			</div>
+			<div class="featured-service-card"  >
+				<img src="./images/Featured Service/Specialized Design.png">
+				<label style="color:black; "><h4>Specialized Designs and Authentic Solutions</h4></label>
+				<label class="featured-service-card-detail">Innovative designs infused with authenticity and creativity, delivering unique solutions that captivate and inspire.</label>
+				
+				<!-- Display Icon with Information -->
+			</div>
+			<!-- <div class="featured-service-card"  >
+				<img src="./Featured Service/Custom Scripting.png">
+				<p style="color:black; ">Sample chichi burichi</p>
+				
+			</div> -->
+		
+		</div>
+
+		<section id="portfolio">
+			<div class="portfolio-container">
+			  <h2>Portfolio</h2>
+			  <p>Check out some of my past projects to see examples of my work and expertise.</p>
+		  
+			  <div class="project">
+				<img <!--src="https://source.unsplash.com/random/800x600" -->alt="Project 1">
+				<h3>Project 1</h3>
+				<p>Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<p>Key Features: Feature 1, Feature 2, Feature 3</p>
+				<a href="#" class="btn">View Details</a>
+			  </div>
+		  
+			  <div class="project">
+				<img <!--src="https://source.unsplash.com/random/800x600" --> alt="Project 2">
+				<h3>Project 2</h3>
+				<p>Description of Project 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Key Features: Feature 1, Feature 2, Feature 3</p>
+				<a href="#" class="btn">View Details</a>
+			  </div>
+			  
+			  <div class="project">
+				<img <!--src="https://source.unsplash.com/random/800x600" -->alt="Project 2">
+				<h3>Project 2</h3>
+				<p>Description of Project 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Key Features: Feature 1, Feature 2, Feature 3</p>
+				<a href="#" class="btn">View Details</a>
+			  </div>
+			  <div class="project">
+				<img <!--src="https://source.unsplash.com/random/800x600"--> alt="Project 2">
+				<h3>Project 2</h3>
+				<p>Description of Project 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Key Features: Feature 1, Feature 2, Feature 3</p>
+				<a href="#" class="btn">View Details</a>
+			  </div>
+			  <!-- Add more project entries as needed -->
+		  
+			</div>
+		  </section>
+
+		  
+		<!-- Call to Action Section -->
+		<section id="cta" style="background: linear-gradient(to bottom, #010101, #544011); padding: 50px 0; text-align: center; margin:auto; width:80%">
+			<div class="container" >
+				<h2 style="color: #fff;">Ready to unlock solutions for your business?</h2>
+				<p style="color: #fff;"> Let's collaborate to streamline processes and drive success.</p>
+				<button class="btn btn-light btn-lg" onclick="window.location.href='#contact'">Get Started</button>
+			</div>
+		</section>
+
+		<section id="contact">
+			<div class="contact-container">
+			  <h2>Contact Me</h2>
+			  <p>If you have any questions or inquiries, feel free to get in touch with me. I'm here to help!</p>
+		  
+			  <form action="submit.php" method="post" class="contact-form">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+		  
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+		  
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" rows="4" required></textarea>
+		  
+				<button type="submit">Send Message</button>
+			  </form>
+			</div>
+		  </section>
+
+		<div class="faq-section">
+			<div class="faq-item">
+				<div class="faq-question">What services do you offer?</div>
+				<div class="faq-answer">We offer a range of services including custom scripting, data analytics, freelance projects, mentorship, and specialized designs. Feel free to explore our website for more details on each service.</div>
+			</div>
+			
+			<div class="faq-item">
+				<div class="faq-question">How can I contact you?</div>
+				<div class="faq-answer">You can contact us through the contact form provided on our website. Simply fill out the form with your name, email, and message, and we'll get back to you as soon as possible.</div>
+			</div>
+			
+			<div class="faq-item">
+				<div class="faq-question">Do you offer free trials?</div>
+			<div class="faq-answer">Yes, we do offer free trials for some of our services. Please contact us for more information and to discuss your specific requirements.</div>
+		</div>
+		
+		<!-- Add more FAQ items as needed -->
+		</div>
+
+		<div id="face2" style= "background:url('./images/pogi.png') no-repeat; opacity:0.95;">
+			<div style="height:100%; width:100%; border:px solid yellow; background-image: linear-gradient(to right, #0002, #000);">
+				<label style="font-size:9vw; color:white; text-shadow: 3vw 3vw 4vw black;font-family: Impact; text-align:  left; width:100%; padding-left:40%; padding-top:5%">Idea</label>
+				<label style="font-size:9vw; color:white; text-shadow: 3vw 3vw 4vw black;font-family: Impact; text-align: left; width:100%; padding-left:40%;">Innovation</label>
+				<label style="font-size:9vw; color:white; text-shadow: 3vw 3vw 4vw black;font-family: Impact; text-align:  left; width:100%; padding-left:40%;">Integration</label>
+			</div>
+		</div>
+
+		<div style="height:; width:100%; background-image:linear-gradient(to bottom, #FFF0, #FFFc, #FFFd, #FFF, #FFF0); text-align: center;">
+			<label style="font-size:50px; color:black; text-shadow: 2vw 2vw 3vw white;font-family: Impact; text-align: center; width:100%; padding-top:1%">Mission</label>
+			<label style="font-size:1rem; color:black; text-shadow: 2vw 2vw 3vw white;font-family: ; text-align: center; width:70%; padding-bottom: 1%">Through my expertise, I would be able to take part for the exponential technology advances. By providing clients satisfaction and nurturing their confidence with regards to products or services that they demand. Surpassing clients expectations </label>
+				
+		</div>
+
+		<div id="contact" style="height:; width:100%; background-image:linear-gradient(to bottom, #0005, #000c, #000d, #000, #0005); text-align: center;">
+			<label style="font-size:50px; color:white; text-shadow: 2vw 2vw 3vw black;font-family: Impact; text-align: center; width:100%; padding-top:1%">Vision</label>
+			<label style="font-size:1rem; color:white; text-shadow: 2vw 2vw 3vw black;font-family: ; text-align: center; width:70%; padding-bottom: 1%">A world where technology travels throughout the space; where human efforts are made at ease, where global crises are no longer a threat to humanity </label>
+				
+		</div>
+	
+		<!-- <div style="background:white; height:100px; color:black">
+			<iframe width="420" height="315"
+				src="https://www.youtube.com/watch?v=tn-xzF39C2I">
+			</iframe>
+		</div> -->
+
+	<br>
+	<br>
+	</body>
+
+	<div id= "footer" class="row">
+
+		<div class="col"  id= "bottom_link" style=" text-align: left; padding-left: 5%">
+			<div class="row">
+				<div class="col-lg-4">
+					<img  href="https://facebook.com/sjay04" style="background:url('./images/icon/tt.png') no-repeat white;  border:1px solid white;" >
+					<img  href="https://facebook.com/sjay04" style="background:url('./images/icon/fb.png') no-repeat white;  border:1px solid white;">
+					<img  href="https://facebook.com/sjay04" style="background:url('./images/icon/ig.png') no-repeat white;  border:1px solid white;">
+					<img href="https://facebook.com/sjay04" style="background:url('./images/icon/yt.png') no-repeat white;  border:1px solid white;">
+				</div>
+				<div class="col-lg-8" style="text-align: center">
+					<span style=" padding-left:25px;" class="col-lg-12 close-footer-sub">(Website/Webbased App &#9679; Android Apps &#9679; Desktop Apps &#9679; Front End &#9679; Back End &#9679; 3D Development)</span>
+				</div>
+			</div>
+		</div>
+
+		
+
+		<div class="col">
+		<div class="row">
+			<div class="col-lg-4">Sjay Pits  <span class="close-footer-sub">&#9679; Samuel Joseph Pitel</span> </div>
+			<div class="col-lg-8">
+				<span class="close-footer-sub" >Software Developer&#9679;  </span>
+				<span class="close-footer-sub"> dao.davon.au@gmail.com &#9679; </span><span>09052672541 </span>
+				</span>
+			</div>
+		</div>
+	</div>
+	</div>
+</html>
+<!-- <aside id="other_features_frame" style="height:800px; width:100%; box-shadow:0 0 5px green; float:left; margin-top:5%">
+				<article id="other_features_title" style='height:5%; width:100%; background:#cfcc; font-size:2.3vw'></article>
+				<iframe src="profile/profile.html" id="other_features_content" style='height:95%; width:100%; background:#adaa'></iframe>
+</aside> -->
+<script src="jquery-3.2.1.min.js"></script>
+<script src="js/scripts.js"></script>
+
+
+<script>
+	// Get the sticky element
+	var footerElement = document.getElementById("footer");
+	var headerElement = document.getElementById("header");
+	var monkey = document.getElementById("monkeypic");
+	// Variable to store the last scroll position
+	var lastScrollPosition = window.pageYOffset;
+	
+	// Event listener for scroll events
+	window.addEventListener("scroll", function() {
+	  // Get the current scroll position
+	  var currentScrollPosition = window.pageYOffset;
+	 
+	  // Check if the user is scrolling up
+	  if (currentScrollPosition > lastScrollPosition) {
+		// Show the sticky element
+		footerElement.classList.add("active");
+		headerElement.classList.remove("active");
+	  } else {
+		// Hide the sticky element
+		footerElement.classList.remove("active");
+		headerElement.classList.add("active");
+	  }
+	
+	  if(currentScrollPosition >50)
+	  	monkey.style.display ='none';
+	  else
+	  	monkey.style.display ='block';
+	
+	  // Update the last scroll position
+	  lastScrollPosition = currentScrollPosition;
+	});
+	</script>
+	
+
+
+	<script>
+		// Get all FAQ questions
+		var faqQuestions = document.querySelectorAll('.faq-question');
+		
+		// Add click event listener to each question
+		faqQuestions.forEach(function(question) {
+		  question.addEventListener('click', function() {
+			// Toggle the 'open' class to show/hide the answer
+			this.classList.toggle('open');
+			var answer = this.nextElementSibling;
+			if (answer.style.display === 'block') {
+			  answer.style.display = 'none';
+			} else {
+			  answer.style.display = 'block';
+			}
+		  });
+		});
+	</script>
+		
